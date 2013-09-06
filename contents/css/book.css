@@ -1,0 +1,24 @@
+.toc {
+    padding-left: 1.5em;
+}
+
+.panel > .toc {
+    padding: 0 10px 0 35px;
+}
+
+.toc a {
+    display: block;
+}
+
+.toc > li.active > a {
+    background: #428bca !important;
+    color: #FFF;
+}
+
+.toc > li > a {
+    padding: 4px;
+}
+
+.toc > li > a:hover {
+    background: #f5f5f5;
+}

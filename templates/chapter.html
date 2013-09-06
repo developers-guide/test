@@ -1,0 +1,19 @@
+{% extends "with_sidebar.html" %}
+
+{% block title %}&mdash; {{ page.metadata.title }}{% endblock %}
+
+{% block sidebar %}
+<div class="panel panel-primary">
+	<!-- Default panel contents -->
+	<div class="panel-heading">Table of Contents</div>
+	<div class="panel-body">
+		{{ contents.book[page.metadata.book]['index.md'].html }}
+	</div>
+    {{ env.utils.buildToC(contents, page.metadata.book, page.url) }}
+</div>
+{% endblock %}
+
+{% block main %}
+<h1>{{ page.metadata.title }}</h1>
+{{ page.html }}
+{% endblock %}

@@ -1,0 +1,9 @@
+{
+	"template": "books.html",
+	"title": "Open Books",
+
+	"books": [
+		"openbooks",
+		"javascript"
+	]
+}

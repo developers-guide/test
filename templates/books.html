@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}&mdash; {{ page.metadata.title }}{% endblock %}
+
+{% block content %}
+<ul>
+	<h1>All books</h1>
+	{% for book in page.metadata.books %}
+		<div class="jumbotron">
+		  <div class="container">
+		    <h1>{{ contents.book[book]['index.md'].metadata.title }}</h1>
+		    {{ contents.book[book]['index.md'].html }}
+		    <p><a class="btn btn-primary btn-lg" href="/book/{{ book }}/index.html">Learn more</a></p>
+		  </div>
+		</div>
+  	{% endfor %}
+</ul>
+{% endblock %}

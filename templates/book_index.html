@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}&mdash; {{ page.metadata.title }}{% endblock %}
+
+{% block content %}
+<div class="jumbotron">
+  <div class="container">
+    <h1>{{ page.metadata.title }}</h1>
+    {{ page.html }}
+  </div>
+</div>
+<h2>Table of contents</h2>
+{{ env.utils.buildToC(contents, page.metadata.id) }}
+{% endblock %}
